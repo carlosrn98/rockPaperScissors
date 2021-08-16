@@ -1,19 +1,37 @@
-//let input = prompt("Rock, paper or scissors").toString().toLowerCase();
+const buttons = document.querySelectorAll("button");
+let selection;
+let input = "";
 
-let input = inputFn();
-let selection = cpu();
+buttons.forEach( (button) =>{
+  button.addEventListener('click', () =>{
+    input = button.id;
+    selection = cpu();
+    document.getElementById(input).style.background = 'red';
+    document.getElementById('cpu').textContent = selection;
 
-console.log(input, selection);
+    setTimeout(function(){
+      if(rules(input, selection) === 0){
+        console.log("That's a tie!");
+      }
+      else if(rules(input, selection) === 2){
+        console.log("you win!");
+        let score_player = parseInt( document.getElementById('score-player').textContent ) + 1;
+        document.getElementById('score-player').textContent = score_player.toString();
+        console.log(score_player);
 
-if(rules(input, selection) === 0){
-  console.log("That's a tie!");
-}
-else if(rules(input, selection) === 2){
-  console.log("you win!");
-}
-else{
-  console.log("you lose!");
-}
+      }
+      else{
+        console.log("you lose!");
+        let score_cpu = parseInt( document.getElementById('score-cpu').textContent ) + 1 ;
+        console.log(score_cpu);
+        document.getElementById('score-cpu').textContent = score_cpu.toString();
+
+      }
+      document.getElementById(input).style.background = 'white';
+    }, 1000);
+
+  });
+});
 
 
 /*********FUNCTIONS*/

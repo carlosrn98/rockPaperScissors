@@ -4,8 +4,30 @@
     <meta charset="utf-8">
     <title>Rock, paper, scissors</title>
     <script type="text/javascript" src="logic.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    
+
+    <header>
+      <h1>Rock, paper, scissors</h1>
+    </header>
+
+    <section id="container">
+      <div id="buttons">
+        <button type="button" name="rock" id="rock">Rock</button>
+        <button type="button" name="paper" id="paper">Paper</button>
+        <button type="button" name="scissors" id="scissors">Scissors</button>
+      </div>
+
+      <div id="player">
+        <h3>CPU's choice: <span id="cpu"></span></h3>
+      </div>
+
+      <div id="score">
+        <h2>Score</h2>
+        <p><span id="score-player">0</span> vs <span id="score-cpu">0</span></p>
+      </div>
+    </section>
+
   </body>
 </html>

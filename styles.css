@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: lightgray;
+  flex:1 1 0px;
+}
+body > header{
+  text-align: center;
+  background-color: blue;
+
+  border-radius: 0.5em;
+}
+
+header>h1{
+  color:white;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: black;
+  flex: 1 1 0px;
+  height:auto;
+  align-items: center;
+  border-radius: 0.5em;
+  color:white;
+}
+
+#buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 100%;
+}
+button{
+  margin:20px 5px 20px 5px;
+  padding: 20px;
+  flex: 1 1 0px;
+  background-color: white;
+}
